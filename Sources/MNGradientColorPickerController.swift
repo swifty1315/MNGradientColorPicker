@@ -98,9 +98,9 @@ public class MNGradientColorPickerController: UIViewController {
     
     fileprivate func setupNavigationBar() {
 
-        navigationItem.title = "Color Picker"
-        //navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(handleCancel))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(handleDone))
+        navigationItem.title = "Color Picker 123"
+        // navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(handleCancel))
+        // navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(handleDone))
     }
 
     fileprivate func setupViews() {
