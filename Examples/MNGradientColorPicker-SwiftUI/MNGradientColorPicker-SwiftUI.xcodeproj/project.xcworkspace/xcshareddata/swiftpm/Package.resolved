@@ -1,0 +1,15 @@
+{
+  "originHash" : "8ba58d3c6f8098e7b57422bcad83215bd42d54474bbd356cadf1a53085603924",
+  "pins" : [
+    {
+      "identity" : "mngradientcolorpicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mohitnandwani/MNGradientColorPicker",
+      "state" : {
+        "branch" : "development",
+        "revision" : "e252816074e2afabd195839c8b88c09d4f3adf84"
+      }
+    }
+  ],
+  "version" : 3
+}
