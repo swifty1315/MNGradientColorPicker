@@ -97,10 +97,13 @@ public class MNGradientColorPickerController: UIViewController {
     // MARK: - Setup Views
     
     fileprivate func setupNavigationBar() {
+
         navigationItem.title = "Color Picker"
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(handleCancel))
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(handleCancel))
     }
-    
+
     fileprivate func setupViews() {
         view.backgroundColor = .systemBackground
         
@@ -412,6 +415,21 @@ public class MNGradientColorPickerController: UIViewController {
         }
     }
     
+    @objc
+    fileprivate func handleDone() {
+
+        guard let hex1Color = hex1Button.color,
+              let hex2Color = hex2Button.color
+        else {
+
+            return
+        }
+
+        delegate?.gradientColorPickerViewController(self, didSelect: [hex1Color, hex2Color])
+
+        dismiss(animated: true)
+    }
+
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -444,7 +462,7 @@ extension MNGradientColorPickerController: ColorPickerViewDelegate {
               let hex2Color = hex2Button.color
         else { return }
         previewView.backgroundLayer(with: [hex1Color.cgColor, hex2Color.cgColor])
-        delegate?.gradientColorPickerViewController(self, didSelect: [hex1Color, hex2Color])
+        // delegate?.gradientColorPickerViewController(self, didSelect: [hex1Color, hex2Color])
     }
     
 }
